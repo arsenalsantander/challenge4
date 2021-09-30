@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/movies")
+@Path("/topic")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class MovieResource {
@@ -17,6 +17,7 @@ public class MovieResource {
     MovieProducer producer;
 
     @POST
+    @Path("/publish")
     public Response send(Movie movie) {
         producer.sendMovieToKafka(movie);
         // Return an 202 - Accepted response.
