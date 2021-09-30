@@ -56,12 +56,6 @@
         <artifactId>quarkus-avro</artifactId>
         <version>2.2.3.Final</version>
     </dependency>
-    <!-- Confluent registry libraries use JAX-RS client -->
-    <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-rest-client-reactive</artifactId>
-        <version>2.2.3.Final</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
